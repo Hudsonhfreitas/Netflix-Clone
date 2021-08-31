@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import './components/MovieRow/movieRow';
+@import './components/Hero/hero';
+@import './components/Header/header';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #111;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.allMovies {
+    margin-top: -13rem;
+}
+

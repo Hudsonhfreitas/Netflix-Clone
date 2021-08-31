@@ -1,0 +1,50 @@
+header {
+    height: 8rem;
+    position: absolute;
+    padding: 1.5rem 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .logo {
+        img {
+            width: 100%;
+            max-width: 200px;
+            height: 100%; 
+        }
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        height: 100%;        
+        i {
+            color: #FFF;
+            margin-right: 4rem;
+            font-size: 3rem;
+            filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.473));
+        }
+        a {
+            display: block;
+            height: 100%; 
+            filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.473));
+            img {
+                width: 100%;
+                height: inherit;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        height: 7.5rem;
+    }
+
+    @media screen and (max-width: 560px) {
+        height: 6.5rem;
+        padding: 1.5rem;
+        nav {
+            i {
+                font-size: 2.5rem;
+                margin-right: 2.5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+.c-row {
+    &:not(:first-child) {
+        margin-top: 1.5rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+        color: #FFF;
+        margin-left: 30px;
+    }
+    .row {
+        position: relative;
+        .prev,
+        .next {
+            position: absolute;
+            width: 4rem;
+            background-color: rgba(0,0,0,0.6);
+            height: 24.5rem;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity .3s;
+            i {
+                color: rgba(255, 255, 255, 0.699);
+                font-size: 4rem;
+            }
+        }
+        .prev {
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .next {
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &:hover {
+            .prev,
+            .next {
+                opacity: 1;
+            }
+        }
+        .movies_wrapper {
+            overflow-x: hidden;
+            .movies_list {
+                display: flex;
+                align-items: center;
+                transition: all ease 0.5s;
+                padding-left: 30px;
+                .movie {
+                    width: 160px;
+                    transform: scale(.92);
+                    cursor: pointer;
+                    transition: all .3s;
+                    &:hover {
+                        transform: scale(1);
+                    }
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 560px) {
+        h2 {
+            margin-left: 15px;
+        }
+        .row {
+            .prev,
+            .next {
+                opacity: 1;
+            }
+            .movies_wrapper {
+                .movies_list {
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+}

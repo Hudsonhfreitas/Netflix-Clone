@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+.c-row:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.c-row h2 {
+  font-size: 2.5rem;
+  color: #FFF;
+  margin-left: 30px;
+}
+
+.c-row .row {
+  position: relative;
+}
+
+.c-row .row .prev,
+.c-row .row .next {
+  position: absolute;
+  width: 4rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 24.5rem;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.c-row .row .prev i,
+.c-row .row .next i {
+  color: rgba(255, 255, 255, 0.699);
+  font-size: 4rem;
+}
+
+.c-row .row .prev {
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.c-row .row .next {
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.c-row .row:hover .prev,
+.c-row .row:hover .next {
+  opacity: 1;
+}
+
+.c-row .row .movies_wrapper {
+  overflow-x: hidden;
+}
+
+.c-row .row .movies_wrapper .movies_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  padding-left: 30px;
+}
+
+.c-row .row .movies_wrapper .movies_list .movie {
+  width: 160px;
+  -webkit-transform: scale(0.92);
+          transform: scale(0.92);
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.c-row .row .movies_wrapper .movies_list .movie:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.c-row .row .movies_wrapper .movies_list .movie img {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 560px) {
+  .c-row h2 {
+    margin-left: 15px;
+  }
+  .c-row .row .prev,
+  .c-row .row .next {
+    opacity: 1;
+  }
+  .c-row .row .movies_wrapper .movies_list {
+    padding-left: 15px;
+  }
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+}
+
+.hero .hero_wrapper {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #111), color-stop(90%, transparent));
+  background: linear-gradient(to top, #111 10%, transparent 90%);
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: inherit;
+}
+
+.hero .hero_wrapper .movie_info {
+  color: #FFF;
+  width: 100%;
+  max-width: 900px;
+  padding-left: 3.5rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 13rem;
+}
+
+.hero .hero_wrapper .movie_info h1 {
+  font-size: 6rem;
+}
+
+.hero .hero_wrapper .movie_info .top {
+  margin-top: 1rem;
+}
+
+.hero .hero_wrapper .movie_info .top span {
+  display: inline-block;
+  font-weight: 700;
+}
+
+.hero .hero_wrapper .movie_info .top span.points {
+  color: #46d369;
+}
+
+.hero .hero_wrapper .movie_info .top span:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.hero .hero_wrapper .movie_info p {
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 130%;
+  max-width: 550px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.hero .hero_wrapper .movie_info .buttons {
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero .hero_wrapper .movie_info .buttons button {
+  padding: .8rem 2rem;
+  border-radius: 5px;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.hero .hero_wrapper .movie_info .buttons button.watch {
+  background: #FFF;
+  margin-right: 1rem;
+}
+
+.hero .hero_wrapper .movie_info .buttons button.watch:hover {
+  background: #cccccc;
+}
+
+.hero .hero_wrapper .movie_info .buttons button.myList {
+  background: rgba(119, 118, 118, 0.6);
+  color: #FFF;
+}
+
+.hero .hero_wrapper .movie_info .buttons button.myList:hover {
+  background: rgba(68, 67, 67, 0.6);
+}
+
+.hero .hero_wrapper .movie_info .buttons button i {
+  font-size: 1.1rem;
+  margin-right: .5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero {
+    max-height: 680px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .hero .hero_wrapper .movie_info {
+    padding: 0 15px;
+  }
+  .hero .hero_wrapper .movie_info h1 {
+    font-size: 5rem;
+  }
+}
+
+header {
+  height: 8rem;
+  position: absolute;
+  padding: 1.5rem 3rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .logo img {
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+header nav i {
+  color: #FFF;
+  margin-right: 4rem;
+  font-size: 3rem;
+  -webkit-filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.473));
+          filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.473));
+}
+
+header nav a {
+  display: block;
+  height: 100%;
+  -webkit-filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.473));
+          filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.473));
+}
+
+header nav a img {
+  width: 100%;
+  height: inherit;
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    height: 7.5rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  header {
+    height: 6.5rem;
+    padding: 1.5rem;
+  }
+  header nav i {
+    font-size: 2.5rem;
+    margin-right: 2.5rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #111;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.allMovies {
+  margin-top: -13rem;
+}
+/*# sourceMappingURL=styles.css.map */

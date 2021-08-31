@@ -1,0 +1,90 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    .hero_wrapper {
+        background: linear-gradient(to top, #111 10%, transparent 90%);
+        height: inherit;
+        display: flex;
+        max-height: inherit;
+        .movie_info {
+            color: #FFF;
+            width: 100%;
+            max-width: 900px;
+            padding-left: 3.5rem ;
+            align-self: center;
+            margin-bottom: 13rem;
+            h1 {
+                font-size: 6rem;
+            }
+            .top {
+                margin-top: 1rem;
+                span {
+                    display: inline-block;
+                    font-weight: 700;
+                    &.points {
+                        color: #46d369;
+                    }
+                    &:not(:last-child) {
+                        margin-right: 1.5rem;
+                    }
+                }
+            }
+            p {
+                margin-top: 1rem;
+                font-size: 1.7rem;
+                color: rgba(255, 255, 255, .8);
+                line-height: 130%;
+                max-width: 550px; 
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+            }
+            .buttons {
+                margin-top: 1.5rem;
+                display: flex;
+                button {
+                    padding: .8rem 2rem;
+                    border-radius: 5px;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+                    transition: all .3s;
+                    &.watch {  
+                        background: #FFF;
+                        margin-right: 1rem;
+                        &:hover {
+                            background: darken(#FFF, 20%);
+                        }
+                    }
+                    &.myList {
+                        background: rgba(119, 118, 118, 0.6);
+                        color: #FFF;
+                        &:hover {
+                            background: darken(rgba(119, 118, 118, 0.6), 20%);
+                        }
+                    }
+                    i {
+                        font-size: 1.1rem;
+                        margin-right: .5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        max-height: 680px;
+    }
+
+    @media screen and (max-width: 560px) {
+        .hero_wrapper {
+            .movie_info {
+                padding: 0 15px;
+                h1 {
+                    font-size: 5rem;
+                }
+            }
+        }
+    }
+}
