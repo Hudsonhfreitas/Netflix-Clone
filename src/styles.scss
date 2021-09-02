@@ -73,3 +73,18 @@ img {
     }
 }
 
+.top {
+    margin-top: 1rem;
+    span {
+        display: inline-block;
+        font-weight: 700;
+        color: #FFF;
+        &.points {
+            color: #46d369;
+        }
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+}
+

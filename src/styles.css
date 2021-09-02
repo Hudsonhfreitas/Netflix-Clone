@@ -138,23 +138,6 @@
   font-size: 6rem;
 }
 
-.hero .hero_wrapper .movie_info .top {
-  margin-top: 1rem;
-}
-
-.hero .hero_wrapper .movie_info .top span {
-  display: inline-block;
-  font-weight: 700;
-}
-
-.hero .hero_wrapper .movie_info .top span.points {
-  color: #46d369;
-}
-
-.hero .hero_wrapper .movie_info .top span:not(:last-child) {
-  margin-right: 1.5rem;
-}
-
 .hero .hero_wrapper .movie_info p {
   margin-top: 1rem;
   font-size: 1.7rem;
@@ -328,12 +311,17 @@ header nav a img {
   position: relative;
 }
 
-.lightBox .movieInfo .info h2 {
-  color: #FFF;
-  font-size: 3.5rem;
+.lightBox .movieInfo .info .top {
+  margin-top: 0;
 }
 
-.lightBox .movieInfo .info p {
+.lightBox .movieInfo .info .top h2 {
+  color: #FFF;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.lightBox .movieInfo .info .top p {
   color: rgba(255, 255, 255, 0.877);
   margin-top: 1rem;
   line-height: 130%;
@@ -433,5 +421,23 @@ img {
 .buttons button i {
   font-size: 1.1rem;
   margin-right: .5rem;
+}
+
+.top {
+  margin-top: 1rem;
+}
+
+.top span {
+  display: inline-block;
+  font-weight: 700;
+  color: #FFF;
+}
+
+.top span.points {
+  color: #46d369;
+}
+
+.top span:not(:last-child) {
+  margin-right: 1.5rem;
 }
 /*# sourceMappingURL=styles.css.map */
