@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function MovieRow({items, titulo}) {
+export default function MovieRow({items, titulo, setShowInfo}) {
 
     const [scrollX, setScrollX] = useState(0);
 
@@ -18,7 +18,7 @@ export default function MovieRow({items, titulo}) {
         if((window.innerWidth - listW) > x) {
             x = ((window.innerWidth - listW) - 60)
         }
-        setScrollX(x)
+        setScrollX(x);
     }
 
     return(
@@ -38,7 +38,7 @@ export default function MovieRow({items, titulo}) {
                         marginLeft: scrollX
                         }}>
                         {items.results.length > 0 && items.results.map(lista => (
-                            <div className="movie" key={lista.id}>
+                            <div className="movie" key={lista.id} onClick={() => {setShowInfo(lista)}}>
                                 <img src={`https://image.tmdb.org/t/p/w300${lista.poster_path}`} alt={lista.name}></img>
                             </div>
                         ))}
