@@ -1,6 +1,7 @@
 export default function MovieInfo({info, setShowInfo}) {
 
-    let date = new Date(info.first_air_date);
+    var date = info.first_air_date != undefined ? new Date(info.first_air_date).getFullYear() : '';
+    
 
     function handleClose(e) {
         var target = e.target.className
@@ -18,8 +19,8 @@ export default function MovieInfo({info, setShowInfo}) {
                     <div className="top">
                         <h2>{info.name}</h2>
                         <span className="points">{info.vote_average} pontos</span>
-                        <span className= "date">{date.getFullYear()}</span>
-                        <span className="country">{info.origin_country[0]}</span>
+                        <span className= "date">{date}</span>
+                        <span className="country">{info.orgin_country != undefined && info.origin_country[0]}</span>
                         <p>{info.overview}</p>                       
                     </div>
                     <div className="buttons">
